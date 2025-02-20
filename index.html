@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>January Specials</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #0B5B82;
+            padding: 1vw 4vw;
+        }
+
+        nav a {
+            margin: 0 1vw;
+            text-decoration: none;
+            font-size: 1.5vw;
+            color: #fff;
+			font-weight: bold;
+        }
+
+        .slider {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 40vw;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slides img {
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        .slider-buttons {
+            position: absolute;
+            bottom: 2vw;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1vw;
+        }
+
+        .slider-buttons button {
+            width: 1.5vw;
+            height: 1.5vw;
+            border: none;
+            border-radius: 50%;
+            background: #000;
+            opacity: 0.5;
+            cursor: pointer;
+        }
+
+        .slider-buttons button.active {
+            opacity: 1;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 3vw;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .arrow.left {
+            left: 1vw;
+        }
+
+        .arrow.right {
+            right: 1vw;
+        }
+
+        .best-sellers {
+            padding: 3vw;
+            text-align: center;
+        }
+
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 2vw;
+            margin-top: 2vw;
+            flex-wrap: wrap;
+        }
+
+        .product {
+            flex: 1;
+            max-width: 20vw;
+            text-align: center;
+            margin: 1vw;
+        }
+
+        .product div {
+         /*   background: #ccc; */
+        }
+		
+		.product div img {
+			width: 100%;
+		}
+		
+
+        .customer-feedback {
+            background: #ddd;
+            padding: 3vw;
+            text-align: center;
+        }
+
+        .footer {
+            background: #000;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            padding: 2vw;
+            flex-wrap: wrap;
+        }
+
+        .footer div {
+            flex: 1;
+            min-width: 15vw;
+            margin: 1vw;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2vw;
+        }
+
+        .footer input {
+            padding: 0.5vw;
+            font-size: 1vw;
+            width: 10vw;
+        }
+
+        .footer button {
+            padding: 0.5vw 1vw;
+            font-size: 1vw;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            nav a {
+                font-size: 4vw;
+            }
+
+            .slider {
+                height: 60vw;
+            }
+
+            .arrow {
+                font-size: 5vw;
+            }
+
+            .slider-buttons button {
+                width: 3vw;
+                height: 3vw;
+            }
+
+            .best-sellers h2 {
+                font-size: 6vw;
+            }
+			
+			
+			        .products {
+            display: block;
+        }
+
+            .product {
+                max-width: 50%;
+                margin: 2vw auto;
+            }
+
+            .product div {
+             /*   height: 30vw; */
+            }
+
+            .footer a {
+                font-size: 3vw;
+            }
+
+            .footer input {
+                width: 60%;
+                font-size: 3vw;
+            }
+
+            .footer button {
+                font-size: 3vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>LOGO</div>
+        <nav>
+            <a href="#">Shop</a>
+            <a href="#">Best Sellers</a>
+            <a href="#">Rewards</a>
+            <a href="#">Specials</a>
+            <a href="#">Account</a>
+            <a href="#">Cart</a>
+        </nav>
+    </header>
+
+    <section class="slider">
+        <button class="arrow left">&#10094;</button>
+        <div class="slides">
+            <img src="images/images-1.jpg" alt="Slide 1">
+            <img src="images/images-2.jpg" alt="Slide 2">
+            <img src="images/images-3.jpg" alt="Slide 3">
+        </div>
+        <button class="arrow right">&#10095;</button>
+        <div class="slider-buttons">
+            <button></button>
+            <button></button>
+            <button></button>
+        </div>
+    </section>
+
+    <section class="best-sellers">
+        <h2 style="font-size: 3vw;">Shop Our Best Sellers</h2>
+        <div class="products">
+            <div class="product">
+                <div><img src="images/TrueB1_23b694e1-c070-4f17-a412-11a2089a03d3_400x400.webp" alt=""></div>
+                <p>Product 1</p>
+                <button style="padding: 1vw 2vw;">ADD</button>
+            </div>
+            <div class="product">
+                <div><img src="images/TrueCapros1_1_60b3717d-c676-4a98-8a86-70d26c7af55a_400x400.webp" alt=""></div>
+                <p>Product 2</p>
+                <button style="padding: 1vw 2vw;">ADD</button>
+            </div>
+            <div class="product">
+                <div><img src="images/TrueOmega31_4dc0b719-d205-4505-8ffc-1047fb0de263_400x400.webp" alt=""></div>
+                <p>Product 3</p>
+                <button style="padding: 1vw 2vw;">ADD</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="customer-feedback">
+        <h2 style="font-size: 3vw;">Our Customers Say it Best!</h2>
+        <p style="font-size: 1.5vw;">
+            I Love TrueOsteo! It’s made such a difference!<br>
+            I take TrueOsteo every day and don’t feel healthy if I don’t take it which happens when I run out. I believe it helps to support my bones. The magnesium in it also keeps me regular. – <strong>Linda, Miami</strong>
+        </p>
+    </section>
+
+    <footer class="footer">
+        <div>
+            <div>LOGO</div>
+            <a href="#">Login</a><br>
+            <a href="#">Account</a><br>
+            <a href="#">Rewards</a><br>
+            <a href="#">Catalog</a>
+        </div>
+        <div>
+            <a href="#">Privacy</a><br>
+            <a href="#">Contact</a><br>
+            <a href="#">Terms</a><br>
+            <a href="#">Shipping</a>
+        </div>
+        <div>
+            <a href="#">Contact Us</a><br>
+            <a href="#">Facebook</a> <a href="#">YouTube</a><br>
+            <input type="email" placeholder="Email">
+            <button>Send</button>
+        </div>
+    </footer>
+
+    <script>
+        const slides = document.querySelector('.slides');
+        const buttons = document.querySelectorAll('.slider-buttons button');
+        const leftArrow = document.querySelector('.arrow.left');
+        const rightArrow = document.querySelector('.arrow.right');
+        let currentIndex = 0;
+        const totalSlides = document.querySelectorAll('.slides img').length;
+
+        function updateSlider(index) {
+            slides.style.transform = `translateX(-${index * 100}%)`;
+            buttons.forEach((btn, idx) => {
+                btn.classList.toggle('active', idx === index);
+            });
+        }
+
+        function autoSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSlider(currentIndex);
+        }
+
+        buttons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                currentIndex = index;
+                updateSlider(index);
+            });
+        });
+
+        leftArrow.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateSlider(currentIndex);
+        });
+
+        rightArrow.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSlider(currentIndex);
+        });
+
+        setInterval(autoSlide, 5000);
+    </script>
+</body>
+</html>
